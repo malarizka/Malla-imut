@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Serenity Space — Personal Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <audio id="bgMusic" loop preload="auto">
+        <source src="https://mp3tourl.com/audio/1779350446213-c68f3ce3-9bfe-4c5e-baa8-f342670146fe.mp3"
+            type="audio/mpeg">
+    </audio>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-feather-alt"></i>
+                <span>Malla</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active"><i class="fas fa-home"></i> <span>Beranda</span></a>
+                <a href="#gallery" class="nav-link"><i class="fas fa-images"></i> <span>Galeri</span></a>
+                <a href="#about" class="nav-link"><i class="fas fa-user"></i> <span>Tentang</span></a>
+            </div>
+            <button class="music-control" id="musicToggle">
+                <i class="fas fa-play" id="musicIcon"></i>
+                <span id="musicStatus">Musik</span>
+            </button>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="profile-frame">
+                <div class="profile-img">
+                    <img src="https://cdn.phototourl.com/free/2026-05-21-259d692c-c6b1-425c-a5de-682e11536a2c.png">
+                </div>
+                <div class="profile-ring"></div>
+            </div>
+            <div class="hero-text">
+                <span class="hero-greeting">Hi, aku Malla</span>
+                <h1>Momen yang <span class="gradient-text">biasa saja</span></h1>
+                <p>Semua akan tampil pada waktunya</p>
+                <div class="hero-buttons">
+                    <a href="#gallery" class="btn-primary"><i class="fas fa-images"></i> Jelajahi Galeri</a>
+                    <button id="musicHeroBtn" class="btn-outline"><i class="fas fa-headphones"></i> Dengarkan</button>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M0,64L80,58.7C160,53,320,43,480,48C640,53,800,75,960,80C1120,85,1280,75,1360,69.3L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z">
+                </path>
+            </svg>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="header-icon">
+                    <i class="fas fa-camera-retro"></i>
+                </div>
+                <h2>Galeri</h2>
+                <p>20 kenangan</p>
+            </div>
+            <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <h3>Tentang Ruang Ini</h3>
+                    <p>Website yang ku buat dengan penuh ke gabutan yang mungkin akan aku lihat di lain hari</p>
+                    <div class="about-features">
+                        <div class="feature"><i class="fas fa-check-circle"></i> 20 Foto Eksklusif</div>
+                        <div class="feature"><i class="fas fa-check-circle"></i> Musik Ambient Otomatis</div>
+                        <div class="feature"><i class="fas fa-check-circle"></i> Desain Menenangkan</div>
+                        <div class="feature"><i class="fas fa-check-circle"></i> Galeri Interaktif</div>
+                    </div>
+                </div>
+                <div class="stats-card">
+                    <div class="stat-item">
+                        <i class="fas fa-images"></i>
+                        <div class="stat-number">20</div>
+                        <div class="stat-label">Total Foto</div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-music"></i>
+                        <div class="stat-number" id="musicStat">♫</div>
+                        <div class="stat-label">Latar Musik</div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-heart"></i>
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Kenangan</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="imageModal" class="modal">
+        <span class="modal-close"><i class="fas fa-times"></i></span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-caption" id="modalCaption"></div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p><i class="far fa-copyright"></i> 2025 Malla tidak ada uang — dibuat dengan <i class="fas fa-heart"></i> untuk
+                diriku sendiri</p>
+            <div class="footer-note">
+                <i class="fas fa-headphones"></i> ga ada hujan ga ada ojek besyek..
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
